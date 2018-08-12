@@ -154,14 +154,14 @@ if (config.web.ssl) {
 }
 
 server.on('error', err => {
-    log.err('SERVER', err);
+    log.error('SERVER', err);
     process.exit(1);
 });
 
 // open database
 db.init(err => {
     if (err) {
-        log.err('DB', err);
+        log.error('DB', err);
         process.exit(1);
     } else {
         log.info('DB', 'Database opened');
